@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 var index = 0;
 
 function slideShow() {
-    setTimeout(slideShow, 2000);
     var slide;
     const slides = document.querySelector('img');
     for (slide = 0; slide < slides.length; slide++) {
@@ -31,6 +30,7 @@ function slideShow() {
         index = 1;
     }
     slides[index - 1].style.display = 'block';
+    setTimeout(slideShow, 2000);
 }
 
 slideShow()

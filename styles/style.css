@@ -260,8 +260,7 @@ nav a {
 .about-container h3,
 h2,
 p {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 
