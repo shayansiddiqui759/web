@@ -1,0 +1,657 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    /* color: black; */
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* padding: 10px 0; */
+}
+
+.logo img {
+    height: 40px;
+    /* Adjust the height as needed */
+    margin-right: 30%;
+}
+
+.sticky-nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    /* Distributes space between logo and navigation */
+    align-items: center;
+    /* Centers vertically */
+    padding: 10px 20px;
+    /* Add some padding for spacing */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.sticky-nav ul li {
+    margin: 0 15px;
+}
+
+.sticky-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Hero section styles */
+.hero {
+    /* background-image: url('./images/backgorund.jpg');
+    background-size: cover; */
+    color: black;
+    text-align: center;
+    padding: 150px 0;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.tagline {
+    font-size: 18px;
+    color: black;
+}
+
+/* Services section styles */
+.section-content {
+    text-align: center;
+}
+
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.services {
+    height: 74%;
+    padding: 21px 0;
+    width: 100%;
+    margin: 32px 10px;
+}
+
+/* Style for the container of service cards */
+.service-cards-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin: 20px auto;
+    scrollbar-width: thin;
+    scrollbar-color: #110101 #f0f0f000;
+    /* Add a gap between cards */
+    gap: 20px;
+    /* Set width and center the container */
+    width: 70%;
+    margin: 20px auto;
+    /* Add padding for better visual spacing */
+    padding: 10px;
+}
+
+/* Individual service cards */
+.service-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    min-width: 40%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    box-sizing: border-box;
+    height: 350px;
+    position: relative;
+
+}
+
+/* Track */
+.service-cards-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+.service-cards-container::-webkit-scrollbar-thumb {
+    background-color: #f0f0f0;
+}
+
+/* Handle on hover */
+.service-cards-container::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+}
+
+.service-cards {
+    display: inline-flex;
+    width: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Add individual background images for each service card */
+.service-card.software-development {
+    background-image: url('./images/software-development.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card.it-consulting {
+    background-image: url('./images/consulting.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card.mobile-app-development {
+    background-image: url('./images/mobile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card.cloud-services {
+    background-image: url('./images/cloud.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.service-card:hover .service-description {
+    opacity: 1;
+}
+
+
+/* About section styles */
+.about {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    /* border: 2px solid black; */
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding: 40px; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h3,
+h2,
+p {
+    display: flex;
+    justify-content: center;
+}
+
+
+.about-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.me {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.contact-link {
+    color: #0e76a8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.table-container {
+    margin: 20px;
+}
+
+.table-container table {
+    width: 90%;
+    border-collapse: collapse;
+    /* margin-top: 10px;
+     */
+    margin: auto;
+}
+
+.table-container th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+
+}
+
+.table-container td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Jobs section styles */
+.jobs {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.jobs h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.job-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Company section styles */
+.company {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.company h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Contact section styles */
+.contact {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact address {
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    /* height: 10%; */
+    color: #fff;
+    /* padding: 20px 0; */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    margin: 0 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-form {
+    max-width: 65%;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    max-width: 65%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #0e76a8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #095e80;
+}
+
+.job-main-section {
+    /* align-items: center; */
+    display: flex;
+    margin: auto;
+}
+
+.job-description {
+    width: 30%;
+    height: 70%;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.job-description p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.job-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.job-description li {
+    margin-bottom: 5px;
+}
+
+.genders {
+    display: flex;
+}
+
+aside {
+    width: 25%;
+    float: right;
+    /* padding: 20px; */
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+aside h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+aside form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    /* width: 95%; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #0e76a8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #095e80;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+
+#enhancements {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 40px 0;
+}
+
+
+.enhancement {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: justify;
+}
+
+.enhancement h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.enhancement a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+
+.gender-fieldset {
+    border: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.gender {
+    display: flex;
+    padding-right: 20px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* enhacnement css
+credits: https://www.youtube.com/watch?v=gWpR6i11pvE&ab_channel=ThapaTechnical
+youtube channel name: Thapa Technical
+Add these styles at the bottom of your style.css file
+Slideshow styles */
+
+.hero {
+    background-image: url("./images/bg1.avif");
+    background-size: 100% 100%;
+    animation: changeImage 20s linear infinite;
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: url("./images/bg1.avif");
+    }
+    25% {
+        background-image: url("./images/bg2.avif");
+    }
+    50% {
+        background-image: url("./images/bg3.avif");
+    }
+    100% {
+        background-image: url("./images/backgorund.jpg");
+    }
+}
+
+
