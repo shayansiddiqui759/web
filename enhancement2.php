@@ -1,29 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>InnovateIT - Transforming Tech Solutions</title>
-</head>
-
+<?php include 'header.inc.php'; ?> <!-- Include Header -->
 <body>
-    <header>
-        <nav class="sticky-nav">
-            <div class="logo">
-                <img src="images/logo.png" alt="Company Logo">
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="enhancement.html">Enhancement</a></li>
-                <li><a href="enhancement2.html">Enhancement 2 </a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'menu.inc.php'; ?> <!-- Include Menu -->
 
     <section  id="enhancements">
         <h2>Enhancements</h2>
@@ -50,13 +29,8 @@
             </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <p>&copy; 2023 InnoveIT. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.inc.php'; ?> <!-- Include Footer -->
+    
 </body>
 
 </html>

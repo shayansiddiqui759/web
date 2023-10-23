@@ -1,30 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Jobs - InnovateIT</title>
-    <script src="scripts/enchancement.js"></script>
-</head>
+<?php include 'header.inc.php'; ?> <!-- Include Header -->
 
 <body>
-    <header>
-        <nav class="sticky-nav">
-            <div class="logo">
-                <img src="images/logo.png" alt="Company Logo">
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="enhancement.html">Enhancement</a></li>
-                <li><a href="enhancement2.html">Enhancement 2 </a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'menu.inc.php'; ?> <!-- Include Menu -->
     <div class="job-main-section">
         <section class="job-description">
             <h2>Position: Data Quality Manager</h2>
@@ -52,7 +31,7 @@
         </section>
 
         <section class="job-description">
-            <h2>Position: Junior Web Developer</h2>
+            <h2>Position: Junior Web Developer</h2> 
             <p><strong>Reference Number:</strong> JWD01</p>
             <p><strong>Salary Range:</strong> $50,000 - $80,000</p>
             <p><strong>Reporting to:</strong> IT Manager</p>
@@ -99,14 +78,8 @@
             </form>
         </aside>
     </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <p>&copy; 2023 InnoveIT. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    
+    <?php include 'footer.inc.php'; ?> <!-- Include Footer -->
+    
 </body>
-
 </html>
