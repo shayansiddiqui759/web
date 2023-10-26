@@ -4,7 +4,7 @@
 
 <body>
     <?php include 'menu.inc.php'; ?> <!-- Include Menu -->
-    <div class="job-main-section">
+    <div class="main-section">
         <section class="job-description">
             <h2>Position: Data Quality Manager</h2>
             <p><strong>Reference Number:</strong> DQM01</p>
@@ -27,7 +27,7 @@
                 <li>Master's degree in Data Management or related field</li>
                 <li>Experience with data quality frameworks (e.g., DQAF)</li>
             </ul>
-            <a href="#" class="apply-link" data-job-reference="DQM01">Apply</a>
+            <a href="apply.php?jobRef=DQM01" class="apply-link" data-job-reference="DQM01">Apply</a>
         </section>
 
         <section class="job-description">
@@ -52,7 +52,7 @@
                 <li>Experience with back-end languages (e.g., Python, Node.js)</li>
                 <li>Experience with front-end languages (e.g., React, Angular)</li>
             </ul>
-            <a href="#" class="apply-link" data-job-reference="JWD01">Apply</a>
+            <a href="apply.php?jobRef=JWD01" class="apply-link" data-job-reference="JWD01">Apply</a>
         </section>
 
         <aside>
@@ -80,6 +80,17 @@
     </div>
     
     <?php include 'footer.inc.php'; ?> <!-- Include Footer -->
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const applyLinks = document.querySelectorAll(".apply-link");
+
+        applyLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+                const jobRef = this.getAttribute('data-job-reference');
+                localStorage.setItem("currentJobRef", jobRef);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

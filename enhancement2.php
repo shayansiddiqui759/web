@@ -7,9 +7,9 @@
     <section  id="enhancements">
         <h2>Enhancements</h2>
             <div class="enhancement">
-                <h3>Implemented Slide Show <a href="index.html"></a></h3>
+                <h3>Implemented Slide Show <a href="index.php"></a></h3>
                 <p>
-                    Implemented <span><a href="index.html"> slideshow </a> </span> feature  on
+                    Implemented <span><a href="index.php"> slideshow </a> </span> feature  on
                     the index.html page. This enhancement provides an elegant way to showcase multiple services when there are more than
                     three service cards.
                 </p>
@@ -21,7 +21,7 @@
 
             <div class="enhancement">
                 <h3>Use of Query Selector</h3>
-                <p>Use `querySelectorAll()` on the <a href="jobs.html">jobs.html</a> and <a href="apply.html">apply.html</a> to make the website responsive to user actions.</p>
+                <p>Use `querySelectorAll()` on the <a href="jobs.php">jobs.html</a> and <a href="apply.php">apply.html</a> to make the website responsive to user actions.</p>
 
                 <p>
                     Source: Help from ChatGPT.

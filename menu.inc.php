@@ -10,6 +10,7 @@
             <li><a href="apply.php">Apply</a></li>
             <li><a href="enhancement.php">Enhancement</a></li>
             <li><a href="enhancement2.php">Enhancement 2 </a></li>
+            <li><a href="manage.php">Manage </a></li>
         </ul>
     </nav>
 </header>

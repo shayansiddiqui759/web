@@ -9,7 +9,7 @@
             <div class="enhancement">
                 <h3>Embedded Map Feature on Index.html</h3>
                 <p>
-                    Added an interactive Google Maps feature to the <a href="index.html#contact">Contact section</a> of
+                    Added an interactive Google Maps feature to the <a href="index.php#contact">Contact section</a> of
                     the index.html page. This allows users to locate the business address easily.
                 </p>
                 <p>
@@ -20,7 +20,7 @@
             <div class="enhancement">
                 <h3>Horizontal Scrolling for Service Card Section</h3>
                 <p>
-                    Implemented a horizontal scrolling feature for the <a href="index.html"></a> Service Section on
+                    Implemented a horizontal scrolling feature for the <a href="index.php"></a> Service Section on
                     the index.html page.
                     This enhancement provides an elegant way to showcase multiple services when there are more than
                     three service cards.
@@ -37,7 +37,7 @@
                     How to Use:
                 </p>
                 <ol>
-                    <li>Visit the <a href="index.html">index.html</a> page on the website.</li>
+                    <li>Visit the <a href="index.php">index.html</a> page on the website.</li>
                     <li>Navigate to the "Our Services" section.</li>
                     <li>If there are more than three service cards, you'll see a horizontal scroll bar below the service
                         cards.</li>

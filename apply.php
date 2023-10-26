@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'header.inc.php'; ?> <!-- Include Header -->
+
+<?php 
+include 'header.inc.php'; // Include Header 
+$jobRef = isset($_GET['jobRef']) ? $_GET['jobRef'] : ''; 
+?>
+
 <body>
     <?php include 'menu.inc.php'; ?> <!-- Include Menu -->
 
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="applyForm">
+    <form action="processEOI.php" method="post" id="applyForm" novalidate="novalidate">
         <h1>Job Application Form</h1>
+
         <label for="jobReference">Job Reference Number:</label>
-        <input type="text" id="jobReference" name="jobReference" readonly>
-        <!-- <input type="text" id="jobReference" name="jobReference" pattern="[A-Za-z0-9]{5}" required> -->
+        <input type="text" id="jobReference" name="jobReference" value="<?php echo htmlspecialchars($jobRef); ?>" readonly>
         <br>
 
         <label for="firstName">First Name:</label>
@@ -23,18 +28,17 @@
         <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required>
         <br>
 
-        <fieldset class="gender-fieldset"> <Strong>Gender:</Strong> 
+        <fieldset class="gender-fieldset">
+            <strong>Gender:</strong>
             <div class="gender">
                 <input type="radio" id="male" name="gender" value="male" required>
                 <label for="male">Male</label>
             </div>
             <div class="gender">
-
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
             </div>
             <div class="gender">
-
                 <input type="radio" id="other" name="gender" value="other">
                 <label for="other">Other</label>
             </div>
@@ -64,7 +68,7 @@
         <br>
 
         <label for="postcode">Postcode:</label>
-        <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+        <input type="text" id="postcode" name="postcode" required>
         <br>
 
         <label for="email">Email Address:</label>
@@ -72,7 +76,7 @@
         <br>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9\s]{8,12}" required>
+        <input type="tel" id="phone" name="phone" required>
         <br>
 
         <fieldset>
@@ -84,7 +88,7 @@
             <input type="checkbox" id="communication" name="skills[]" value="Communication">
             <label for="communication">Communication</label>
             <input type="checkbox" id="otherSkills" name="skills[]" value="Other skills...">
-            <label for="otherSkills" >Other skills...</label>
+            <label for="otherSkills">Other skills...</label>
         </fieldset>
         <br>
 
@@ -95,7 +99,17 @@
         <button type="submit">Apply</button>
     </form>
     
-    <?php include 'footer.inc.php'; ?> <!-- Include Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const jobReferenceInput = document.getElementById("jobReference");
+            const jobRefFromStorage = localStorage.getItem("currentJobRef");
 
+            if(jobRefFromStorage) {
+                jobReferenceInput.value = jobRefFromStorage;
+            }
+        });
+    </script>
+    
+    <?php include 'footer.inc.php'; ?> <!-- Include Footer -->
 </body>
 </html>
